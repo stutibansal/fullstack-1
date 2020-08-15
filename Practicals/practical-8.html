@@ -6,12 +6,39 @@
     <title>Practical-8</title>
     <style>
         ul{
+            margin-top: 0;
             list-style-type: none;
+            margin: auto;
+            margin-bottom: 35px;
+            padding: 0;
+            overflow: hidden;
+            background-color: gray;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-evenly;
+            position: fixed;
+            top: 0;
         }
-        li{
+        ul li{
             display: inline-block;
         }
+        ul li a{
+            display: block;
+            color: white;
+            font-weight: bold;
+            width: 135px;
+            padding: 10px 25px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+        }
+        ul li a:hover{
+            background-color: white;
+            color: black;
+        }
         #box1{
+            margin-top: 80px;
             height: 100vh;
             background-image: url("../image/com.jpg");
             background-repeat: no-repeat;
@@ -22,25 +49,28 @@
             font-family: Arial, Helvetica, sans-serif;
             padding: 10px;
         }
-        div h1{
+        #box2,#box3,#box4,#box5 h1{
             text-align: center;
         }
         .circle{
-            display: block;
+           display: block;
             float: left; 
             margin: 35px; 
-            /* border: goldenrod 1px solid;  */
             width: 20%;
-        }
-        .circle img{
-            height: 277px;
-            border-radius: 50%;
-        }
-        #box2{
-            height: 100vh;
+            height: 95vh;
             display: flex;
-            justify-content: center;
+           justify-items: center;
             align-items: center;
+        }
+        .circle img{ 
+            height: 277px;
+            border-radius: 50%; 
+
+        }
+        #box2 h1{
+            display: flex;
+           justify-items: center;
+            align-items: center; 
         }
         #left-side{
             width: 50%;
@@ -50,6 +80,13 @@
             color: white;
             margin-right: 10px;
             font-size: 25px;
+            text-align: justify;
+            padding: 10px;
+        }
+        #left-side h3{
+            text-align: left;
+            margin:0;
+            margin-bottom: 10px;
         }
         #right-side{
             margin-top: -35px;
@@ -58,23 +95,23 @@
         }
         #article-1{
         width: 100%;
-        height: 225px;
+        height: 230px;
         margin-bottom: 15px;
         font-size: 30px;
         background-image: url("../image/p1.jpg");
         }
         #article-2{
         width: 100%;
-        height: 225px;
+        height: 230px;
         margin-bottom: 15px;
         background-image: url("../image/p2.jpeg");
         font-size: 30px; 
         }
         #article-3{
         width: 100%;
-        height: 225px;
+        height: 230px;
         margin-bottom: 15px;
-        font-size: 40px;
+        font-size: 30px;
         background-image: url("../image/p3.jpg");
         }
         #box3::after{
@@ -82,58 +119,76 @@
             display: block;
             clear: both;
         }
-        .sec1{
+        .sec{
             width: 20%;
             float: left;
-            background-color: red;
-            height: 400px;
-            margin: 37px;
+            background-color: lightgray;
+            margin: 20px 22px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow:  0 5px 5px rgba(0, 0, 0, 0.15);
+            height: auto;
         }
-        .sec2{
-            width: 20%;
-            float: left;
-            background-color: red;
-            height: 400px;
-            margin: 37px;
+        .sec img{
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
-        .sec3{
-            width: 20%;
-            float: left;
-            background-color: red;
-            height: 400px;
-            margin: 37px;
+        .sec h4{
+            margin: 0px 10px;
+            text-align: center;
+            
         }
-        .sec4{
-            width: 20%;
-            float: left;
-            background-color: red;
-            height: 400px;
-            margin: 37px;
+        .sec a{
+            display: block;
+            text-align: center;
+           width: 90%;
+           padding: 10px;
+           background-color: red;
+           text-decoration: none;
+           border-radius: 10px;
+           color: white;
+           float: left;
+        }
+         .sec a:hover{
+            background-color: blue;
+        }
+        p{
+            text-align: justify;
+            font-size: 15px;
+            margin: 10px;
+            line-height: 25px;
+            
         }
         footer{
-            font-size: 40px;
-            color: white;
+            font-size: 20px;
             background-color: violet;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
+        }
+        footer a:hover{
+            background-color: beige;
         }
     </style>
 </head>
 <body>
+    <a name="top"></a>
     <header>
         <ul>
-            <li><a href="#"></a>HOME</li>
-            <li><a href="#"></a>ABOUT US</li>
-            <li><a href="#"></a>TEAM</li>
-            <li><a href="#"></a>TECHNOLOGIES</li>
-            <li><a href="#"></a>CONTACT</li>
+            <li><a href="#part1">HOME</a></li>
+            <li><a href="#part2">ABOUT US</a></li>
+            <li><a href="#part3">TEAM</a></li>
+            <li><a href="#part4">TECHNOLOGIES</a></li>
+            <li><a href="#part5">CONTACT</a></li>
         </ul>
     </header>
+    <a name="part1"></a>
     <div id="box1">
         <h1>PRACTICAL - 8</h1>
     </div>
+    <a name="part3"></a>
     <div id="box2">
-        <h1>Team Members</h1>
+        <h1><center>Team Members</center></h1>
         <div class="circle">
             <img src="../image/1.png">
         </div>
@@ -147,6 +202,7 @@
             <img src="../image/9.png">
         </div>
     </div>
+    <a name="part2"></a>
     <div id="box3">
         <h1>About Us</h1>
         <div id="left-side">
@@ -172,17 +228,45 @@
         </div>
     </div>
     <br>
-    <h1>Section-3</h1>
+    <a name="part4"></a>
     <div id="box4">
-        <div class="sec1"></div>
-        <div class="sec2"></div>
-        <div class="sec3"></div>
-        <div class="sec4"></div>
-    </div>
+        <h1>Technologies Used</h1>
+        <div class="sec">
+            <img src="../image/ithtml.png" height="168px">
+        <h4>Introduction to HTML</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet error fugiat quo, nihil sequi maiores illum odio?
+         Nesciunt, totam. Lorem ipsum dolor sit amet.</p>
+         <a href="../intro/introhtml.html">Read More</a>
+        </div>
+        <div class="sec">
+            <img src="../image/scss.png">
+            <h4>Introduction to CSS</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur corrupti laboriosam reiciendis quidem libero, laborum
+             nam asperiores cum repellendus iusto.</p>
+             <a href="../intro/introcss.html">Read More</a>
+        </div>
+        <div class="sec">
+            <img src="../image/images.jpg">
+        <h4>Introduction to JS</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi praesentium, fuga illo quas iure quidem nam dignissimos non
+         ex repudiandae. Lorem ipsum dolor sit amet.</p>
+         <a href="../intro/introjs.html">Read More</a>
+        </div>
+        <div class="sec">
+            <img src="../image/bt.png">
+        <h4>Introduction to Bootstrap</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sunt possimus labore iure ad sequi nisi. Harum, officia accusamus.
+         Dolorem. Lorem ipsum dolor sit amet.</p>
+         <a href="../intro/introbootstrap.html">Read More</a>
+        </div>
+    </div> 
+    <a name="part5"></a>
     <div id="box5">
-        <h1>Section-4</h1>
+        <h1>Contact</h1>
         <footer>
-            Footer
+            Website Template for Practical-8 &copy; <a href="https://www.beta-labs.in/">Beta-labs</a>
+            <br><br><a href="#top">
+            Back to top</a>
         </footer>
     </div>
 </body>
